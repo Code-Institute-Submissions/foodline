@@ -87,6 +87,49 @@ body {
     font-weight: 300;
 }
 
+/* -------------------------------- Products Page */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+    color: black;
+}
+
+.product-container {
+    background: #EAF5EF;
+}
+
+.product-box {
+    color: black;
+    border-radius: 20px;
+    border: none;
+    height: 100%;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.16);
+}
+
+.product-box:hover {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.30);
+}
+
+.product-img {
+    width: 100%;
+    padding: 30px;
+}
+
+.add-cart {
+    width: 120px;
+    background: #FF6060;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
