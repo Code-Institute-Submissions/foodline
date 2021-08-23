@@ -137,6 +137,10 @@ body {
     color: black;
 }
 
+.filter-top {
+    padding-left: 2px;
+}
+
 .filter-section{
     margin: 10px 0px 10px 0px;
 }
@@ -169,7 +173,22 @@ body {
     box-shadow: 0 3px 6px rgb(0 0 0 / 0.16);
 }
 
+#sort-selector {
+    color: #FC7A57;
+    margin: 10px 2px;
+    width: 200px;
+    border: 0;
+    outline: 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.16);
+}
 
+.all-product-filter,
+.all-product-filter:hover {
+    font-size: 14px;
+    color: #54B582;
+    text-decoration: none;
+}
 
 /* -------------------------------- Media Queries */
 
