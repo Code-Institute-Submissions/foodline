@@ -102,6 +102,7 @@ body {
 
 .product-container {
     background: #EAF5EF;
+    padding: 20px;
 }
 
 .product-box {
@@ -127,6 +128,10 @@ body {
     color: white;
     font-weight: 300;
     margin-bottom: 10px;
+}
+
+.product-details-container {
+    color: black;
 }
 
 
