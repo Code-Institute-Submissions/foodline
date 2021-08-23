@@ -24,6 +24,7 @@ body {
     color: #54B582;
     font-weight: 500;
     letter-spacing: 1px;
+    margin: 30px;
 }
 
 .nav-link-filter{
@@ -103,6 +104,8 @@ body {
 .product-container {
     background: #EAF5EF;
     padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
 }
 
 .product-box {
@@ -133,6 +136,39 @@ body {
 .product-details-container {
     color: black;
 }
+
+.filter-section{
+    margin: 10px 0px 10px 0px;
+}
+
+.badge-box {
+    text-decoration: none;
+    display: inline;
+    margin-bottom: 20px;
+}
+
+.badge-category {
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid #54B582;
+    color: #54B582;
+    background-color: transparent;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    margin: 2px;
+    margin-bottom: 10px;
+}
+
+.badge-category:hover,
+.badge-category:active,
+.badge-category:focus {
+    border: 1px solid #54B582;
+    color: white;
+    background-color: #54B582;
+    text-decoration: none;
+    border-radius: 16px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.16);
+}
+
 
 
 /* -------------------------------- Media Queries */
