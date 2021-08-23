@@ -7,9 +7,10 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="" class="dropdown-item">Fish, Egg &amp; Dairy</a>
-                <a href="" class="dropdown-item">Meat</a>
-                <a href="" class="dropdown-item">Vegeterian &amp; Vegan</a>
-                <a href="" class="dropdown-item">All Proteins</a>
+                <a href="{% url 'products' %}?category=meat" class="dropdown-item">Meat</a>
+                <a href="{% url 'products' %}?category=vegetarian" class="dropdown-item">Vegeterian</a>
+                <a href="{% url 'products' %}?category=vegan" class="dropdown-item">Vegan</a>
+                <a href="{% url 'products' %}?category=proteins" class="dropdown-item">All Proteins</a>
             </div>
         </li>
 
@@ -18,10 +19,10 @@
                 Greens & Vegetables
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Fruits &amp; Berries</a>
-                <a href="" class="dropdown-item">Vegetables</a>
-                <a href="" class="dropdown-item">Root Vegetables</a>
-                <a href="" class="dropdown-item">All Vegetables</a>
+                <a href="{% url 'products' %}?category=fruits,berries" class="dropdown-item">Fruits &amp; Berries</a>
+                <a href="{% url 'products' %}?category=vegetables" class="dropdown-item">Vegetables</a>
+                <a href="{% url 'products' %}?category=root_vegetables" class="dropdown-item">Root Vegetables</a>
+                <a href="{% url 'products' %}?category=root_vegetables,vegetables,fruits,berries" class="dropdown-item">All Vegetables</a>
             </div>
         </li>
 
@@ -30,11 +31,11 @@
                 Beverages
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Water</a>
-                <a href="" class="dropdown-item">Soda</a>
-                <a href="" class="dropdown-item">Juices</a>
-                <a href="" class="dropdown-item">Coffie &amp; Tea</a>
-                <a href="" class="dropdown-item">All Beverages</a>
+                <a href="{% url 'products' %}?category=water" class="dropdown-item">Water</a>
+                <a href="{% url 'products' %}?category=soda" class="dropdown-item">Soda</a>
+                <a href="{% url 'products' %}?category=juices" class="dropdown-item">Juices</a>
+                <a href="{% url 'products' %}?category=tea,coffie" class="dropdown-item">Coffie &amp; Tea</a>
+                <a href="{% url 'products' %}?category=tea,coffie,juices,soda,water" class="dropdown-item">All Beverages</a>
             </div>
         </li>
 
@@ -43,10 +44,10 @@
                 Other Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Bread &amp; Cookies</a>
-                <a href="" class="dropdown-item ">Candy, Chips, Snacks</a>
-                <a href="" class="dropdown-item ">Cleaning</a>
-                <a href="" class="dropdown-item ">Sauces</a>
+                <a href="{% url 'products' %}?category=bread,cookies" class="dropdown-item">Bread &amp; Cookies</a>
+                <a href="{% url 'products' %}?category=candy,chips,snacks" class="dropdown-item ">Candy, Chips, Snacks</a>
+                <a href="{% url 'products' %}?category=cleaning" class="dropdown-item ">Cleaning</a>
+                <a href="{% url 'products' %}?category=sauces" class="dropdown-item ">Sauces</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
