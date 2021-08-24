@@ -71,3 +71,20 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_to_cart(request, item_id):
+    """ Add a quantity of the specified product to the shopping cart """
+
+    quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
+    cart = request.session.get('cart', {})
+
+    if item_id in list(cart.keys()):
+        cart[item_id] += quantity
+    else:
+        cart[item_id] = quantity
+
+    request.session['cart'] = cart
+    print(request.session['cart'])
+    return redirect(redirect_url)
