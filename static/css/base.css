@@ -35,6 +35,18 @@ body {
     margin-right: 30px;
 }
 
+.fa-lg,
+.text-center,
+.cart-meny {
+    color: #FF6060;
+    font-weight: 200;
+}
+
+.text-center p {
+    color: black;
+    font-size: 13px;
+}
+
 .nav-link-filter:hover,
 .nav-link-filter:active,
 .nav-link-filter:focus,
