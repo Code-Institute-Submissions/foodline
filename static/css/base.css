@@ -217,6 +217,35 @@ body {
     cursor: pointer;
 }
 
+.checkout-btn {
+    width: 120px;
+    background: #54B582;
+    color: white;
+    font-weight: 300;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.16);
+}
+
+.checkout-btn:hover {
+    text-decoration: none;
+    background: #FF6060;
+    color: white;
+}
+
+.more-btn {
+    color: black;
+    text-transform: uppercase;
+}
+
+.more-btn:hover {
+    color: #54B582;
+    text-decoration: none;
+}
+
+.cart-box {
+    background-color: #EAF5EF;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
