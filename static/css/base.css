@@ -27,7 +27,7 @@ body {
     margin: 30px;
 }
 
-.nav-link-filter{
+.nav-link-filter {
     text-transform: uppercase;
     color: #54B582;
     font-weight: 500;
@@ -103,13 +103,13 @@ body {
 /* -------------------------------- Products Page */
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
     color: black;
 }
 
@@ -145,17 +145,46 @@ body {
     color: white;
     font-weight: 300;
     margin-right: 10px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
 }
 
 .product-details-container {
     color: black;
 }
 
+.qty_input {
+    border: none;
+    background-color: #54b581ee;
+    color: white;
+    text-align: center;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+}
+
+.qty-btn {
+    background: #54B582;
+    border-radius: 20px;
+    padding-bottom: 2px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+}
+
+.qty-btn:hover {
+    background: #FC7A57;
+}
+
+.ripe-box {
+    width: 200px;
+    border: none;
+    background-color: #54B582;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+}
+
 .filter-top {
     padding-left: 2px;
 }
 
-.filter-section{
+.filter-section {
     margin: 10px 0px 10px 0px;
 }
 
@@ -251,30 +280,32 @@ body {
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
-      max-width: 80%;
+        max-width: 80%;
     }
-  }
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-      .header-container {
-          padding-top: 164px;
-      }
-  }
-  
-  /* pad the top a bit when navbar is collapsed on mobile */
-  @media (max-width: 991px) {
-      .header-container {
-          padding-top: 116px;
-      }
-  
-      body {
-          height: calc(100vh - 116px);
-      }
-  } 
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
