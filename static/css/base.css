@@ -241,6 +241,9 @@ body {
     right: 10px;
 }
 
+
+.update-link,
+.remove-item,
 .up-link {
     color: #54B582;
     cursor: pointer;
@@ -273,6 +276,12 @@ body {
 .cart-box {
     background-color: #EAF5EF;
     box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+}
+
+.image-box {
+    background-color: white;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    text-align: center;
 }
 
 /* -------------------------------- Media Queries */
