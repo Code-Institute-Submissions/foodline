@@ -75,7 +75,18 @@
                                                         id="id_qty_{{ product.id }}">
                                                 </div>
                                             </div>
+                                            {% with product.is_ripe as r %}
+                                            {% if r %}
+                                                <div class="col-12">
+                                                    <select class="form-control ripe-box w-50" name="product_ripe" id='id_product_ripe' style="display: none;">
+                                                        <option value="Almost">Almost Ripe</option>
+                                                        <option value="Ripe" selected>Ripe</option>
+                                                        <option value="Extra">Really Ripe</option>
+                                                    </select>
+                                                </div>
+                                            {% endif %}
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        {% endwith %}
                                         </div>
                                     </form>
                                     <p class="mb-0 flex-column">{{ product.name }}</p>
