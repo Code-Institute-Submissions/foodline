@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+
+from products.models import Product
 
 # Create your views here.
 
@@ -12,9 +15,10 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart """
 
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    ripeness = "Ripe"
+    ripeness = None
     if 'product_ripe' in request.POST:
         ripeness = request.POST['product_ripe']
     cart = request.session.get('cart', {})
@@ -23,15 +27,19 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if ripeness in cart[item_id]['items_by_ripeness'].keys():
                 cart[item_id]['items_by_ripeness'][ripeness] += quantity
+                messages.success(request, f'{product.name} added to your cart')
             else:
                 cart[item_id]['items_by_ripeness'][ripeness] = quantity
+                messages.success(request, f'{product.name} added to your cart')
         else:
             cart[item_id] = {'items_by_ripeness': {ripeness: quantity}}
+            messages.success(request, f'{product.name} added to your cart')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
         else:
             cart[item_id] = quantity
+            messages.success(request, f'{product.name} added to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -41,7 +49,7 @@ def adjust_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
-    ripeness = "Ripe"
+    ripeness = None
     if 'product_ripe' in request.POST:
         ripeness = request.POST['product_ripe']
     cart = request.session.get('cart', {})
@@ -67,7 +75,7 @@ def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 
     try:
-        ripeness = "Ripe"
+        ripeness = None
         if 'product_ripe' in request.POST:
             ripeness = request.POST['product_ripe']
         cart = request.session.get('cart', {})

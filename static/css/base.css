@@ -100,6 +100,66 @@ body {
     font-weight: 300;
 }
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.t-success {
+    background: #EAF5EF;
+}
+
+.t-warning {
+    background: #FC7A57;
+    color: white;
+}
+
+.t-info {
+    background: #54B582;
+    color: white;
+}
+
+.t-error {
+    background: #FF6060;
+    color: white;
+}
+
+
 /* -------------------------------- Products Page */
 
 .overlay {
