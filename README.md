@@ -104,7 +104,8 @@ For most text:
 -
 
 ## Bugs (Known Issues): 
-1. 
+1. Ripeness doesn't work - Fixed
+2. Filtered products goes to default when user adds to cart - 
 
 
 # User Story Testing

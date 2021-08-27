@@ -14,7 +14,7 @@ def add_to_cart(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    ripeness = None
+    ripeness = "Ripe"
     if 'product_ripe' in request.POST:
         ripeness = request.POST['product_ripe']
     cart = request.session.get('cart', {})
@@ -41,9 +41,9 @@ def adjust_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     quantity = int(request.POST.get('quantity'))
-    ripeness = None
-    if 'product_ripeness' in request.POST:
-        ripeness = request.POST['product_ripeness']
+    ripeness = "Ripe"
+    if 'product_ripe' in request.POST:
+        ripeness = request.POST['product_ripe']
     cart = request.session.get('cart', {})
 
     if ripeness:
@@ -67,9 +67,9 @@ def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 
     try:
-        ripeness = None
-        if 'product_ripeness' in request.POST:
-            ripeness = request.POST['product_ripeness']
+        ripeness = "Ripe"
+        if 'product_ripe' in request.POST:
+            ripeness = request.POST['product_ripe']
         cart = request.session.get('cart', {})
 
         if ripeness:

@@ -73,12 +73,15 @@
                                                 </span>
                                             </button>
                                         </div>
+                                        {% if item.product.is_ripe %}
+                                            <input type="hidden" name="product_ripe" value="{{ item.ripeness }}">
+                                        {% endif %}
                                     </div>
                                 </div>
                             </form>
                             <a class="update-link"><small>Update</small></a>
                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                                data-ripeness="{{ item.ripeness }}"><small>Remove</small></a>
+                            data-product_ripeness="{{ item.ripeness }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -145,11 +148,11 @@
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var ripeness = $(this).data('product_ripeness');
+        var ripeness = $(this).data('product_ripe');
         var url = `/cart/remove/${itemId}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken,
-            'product_ripeness': ripeness
+            'product_ripe': ripeness
         };
 
         $.post(url, data)
