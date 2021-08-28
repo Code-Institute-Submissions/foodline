@@ -19,22 +19,27 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="text-center">Checkout</h2>
+                <h2 class="text-center logo-font mt-5 mb-4">Checkout</h2>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ product_count }})</p>
+        <div class="row checkout-box">
+            <div class="col-12 col-lg-6 order-lg-last product-summary">
+                <p class="text-muted mt-4">
+                    {% if product_count == 1 %}
+                            Checking out with 1 product</p>
+                        {% else %}
+                            Checking out with ({{ product_count }}) diffrent products</p>
+                    {% endif %}
                 <div class="row">
-                    <div class="col-7 offset-2">
+                    <div class="col-7 offset-2 mt-4">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
                     </div>
                     <div class="col-3 text-right">
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
-                {% for item in bag_items %}
+                {% for item in cart_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
                             <a href="{% url 'product_detail' item.product.id %}">
@@ -46,12 +51,12 @@
                             </a>
                         </div>
                         <div class="col-7">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 text-black"><strong>{{ item.product.name }}</strong></p>
                             {% if item.product.is_ripe %}
-                            <p class="my-0">Ripeness:
-                                {% if item.product.is_ripe %}{{ item.ripeness|upper }}{% else %}N/A{% endif %}</p>
+                            <p class="my-0 small text-muted">Ripeness:
+                                {% if item.product.is_ripe %}{{ item.ripeness }}{% else %}N/A{% endif %}</p>
                             {% endif %}
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small text-muted">Amount: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
                             <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -72,8 +77,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <p class="text-muted">Please fill out the form below to complete your order</p>
+            <div class="col-12 col-lg-6 checkout-form">
+                <p class="text-center mt-4">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">

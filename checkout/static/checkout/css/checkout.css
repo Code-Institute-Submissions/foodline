@@ -3,6 +3,7 @@
     background: #54B582;
     border: none;
     box-shadow: 0px 3px 3px rgba(128, 128, 128, 0.932);
+    margin-bottom: 10px;
 }
 
 .checkout:hover {
@@ -10,4 +11,17 @@
     background: #FC7A57;
     border: none;
     box-shadow: 0px 3px 6px gray;
+}
+
+.checkout-box {
+    background-color: #EAF5EF;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    border-radius: 20px;
+}
+
+
+.product-summary:hover,
+.checkout-form:hover {
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    border-radius: 20px;
 }
