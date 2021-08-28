@@ -1,4 +1,4 @@
-<div class="toast" data-delay="3000">
+<div class="toast" data-delay="10000" data-autohide="{% if grand_total %}false{% else %}true{% endif %}">
     <div class="toast-header t-success">
         <strong class="mr-auto"><i class="fas fa-check"></i> Done! </strong>
         <small>now</small>
@@ -6,7 +6,53 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="toast-body text-center">
-        <div>{{ message }}</div>
+    <div class="toast-body text-center ">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-1">
+            </div>
+        </div>
+        {% if grand_total %}
+            <p class="text-black py-1">Your Shopping Cart</p>
+            <div class="cart-notification-wrapper">
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <img class="w-100" src="{{ item.product.image.url }}">
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            {% if item.product.is_ripe %}
+                            <p class="my-0">Ripeness:
+                                {% if item.product.is_ripe %}{{ item.ripeness }}{% else %}N/A{% endif %}</p>
+                            {% endif %}
+                            <p class="my-0 small text-muted">Amount: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <strong><p class="mt-1 mb-0 t-success">
+                        <span class="float-left">Total</span>{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}: 
+                        <span class="float-right">${{ total|floatformat:2 }}</span>
+                    </p></strong>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="t-success shadow-sm text-center">
+                            Spend <strong>${{ free_delivery_delta }}</strong> more to get free delivery!
+                        </p>
+                    {% endif %}
+                    <div class="mt-3 mb-2">
+                    <a href="{% url 'view_cart' %}" class="btn-lg checkout-btn rounded-0">
+                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
