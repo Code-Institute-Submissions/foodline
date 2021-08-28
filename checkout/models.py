@@ -12,6 +12,7 @@ class Order(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     delivery_address = models.CharField(max_length=80, null=True, blank=True)
+    city = models.CharField(max_length=80, null=True, blank=True)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     country = models.CharField(max_length=40, null=False, blank=False)
     delivery_time = models.CharField(max_length=20, null=False, blank=False)
