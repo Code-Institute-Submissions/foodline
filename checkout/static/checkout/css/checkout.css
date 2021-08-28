@@ -24,4 +24,62 @@
 .checkout-form:hover {
     box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
     border-radius: 20px;
+    transition-delay: 0.1s;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement,
+.stripe-style-input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 450ms ease;
+    transition: box-shadow 450ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #90979e;
+}
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+
+.cards-box {
+    font-size: 16px;
+    color: white;
+    margin: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.cards {
+    padding: 5px;
+    margin-bottom: 20px;
+    color: #54b581de;
+    font-size: 40px;
 }
