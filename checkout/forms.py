@@ -6,9 +6,8 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
-                  'delivery_address', 'delivery_time',
-                  'delivery_info', 'postcode', 'country',
-                  'city',)
+                  'delivery_address', 'delivery_info',
+                  'postcode', 'country', 'city',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -24,7 +23,6 @@ class OrderForm(forms.ModelForm):
             'postcode': 'Postal Code',
             'city': 'City',
             'country': 'Country',
-            'delivery_time': 'Prefered Delivery Time',
             'delivery_info': 'Additional info for delivery',
         }
 
