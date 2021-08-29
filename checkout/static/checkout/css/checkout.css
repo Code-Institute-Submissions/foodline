@@ -84,6 +84,21 @@
     font-size: 40px;
 }
 
-.order-summary {
-    text-align: center;
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #54b581b2;
+    z-index: 9999;
 }
+
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+} 
