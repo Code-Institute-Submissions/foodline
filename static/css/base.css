@@ -330,6 +330,73 @@ body {
     text-align: center;
 }
 
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: transparent;
+    border-radius: 20px;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-decoration: none;
+    background: #FF6060;
+    color: white;
+    border: none;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+    text-decoration: none;
+    background: #54B582;
+    color: white;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    border-color: transparent;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
+.allauth input[type=text],
+.allauth input[type=password],
+.allauth input[type=email] {
+    border: none;
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    height: 30px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -363,4 +430,22 @@ body {
     body {
         height: calc(100vh - 116px);
     }
+}
+
+.allauth {
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+.auth-box {
+    background-color: #EAF5EF;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    padding: 20px 10px 20px 10px;
+    border-radius: 20px;
+}
+
+.btn-div {
+    text-align: center;
 }
