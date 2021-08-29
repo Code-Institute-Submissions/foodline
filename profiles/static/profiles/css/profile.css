@@ -1,0 +1,62 @@
+.profile-box{
+    background: #EAF5EF;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+}
+
+.save-btn {
+    text-decoration: none;
+    background: #FF6060;
+    color: white;
+    border: none;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    margin: 20px;
+}
+
+.save-btn:hover {
+    text-decoration: none;
+    background: #54B582;
+    color: white;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.30);
+}
+
+
+.profile-form {
+    display: inline-block;
+    font-weight: 400;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-decoration: none;
+    background: white;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
+#profile-update-form .form-control {
+    color: #000;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}

@@ -397,6 +397,25 @@ body {
     height: 30px;
 }
 
+.allauth {
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+.auth-box {
+    background-color: #EAF5EF;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    padding: 20px 10px 20px 10px;
+    border-radius: 20px;
+}
+
+.btn-div {
+    text-align: center;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -430,22 +449,4 @@ body {
     body {
         height: calc(100vh - 116px);
     }
-}
-
-.allauth {
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
-
-
-.auth-box {
-    background-color: #EAF5EF;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
-    padding: 20px 10px 20px 10px;
-    border-radius: 20px;
-}
-
-.btn-div {
-    text-align: center;
 }

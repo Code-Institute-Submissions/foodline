@@ -19,7 +19,6 @@
     border-radius: 20px;
 }
 
-
 .product-summary:hover,
 .checkout-form:hover {
     box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
@@ -39,6 +38,7 @@
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 450ms ease;
     transition: box-shadow 450ms ease;
+    padding: 9px;
 }
 
 .StripeElement--focus,
@@ -53,6 +53,7 @@
 
 .stripe-style-input::placeholder {
     color: #90979e;
+    margin-top: 0px;
 }
 
 .fieldset-label {
