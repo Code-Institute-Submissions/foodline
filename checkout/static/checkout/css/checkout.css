@@ -33,7 +33,6 @@
 .stripe-style-input {
     box-sizing: border-box;
     height: 40px;
-    padding: 10px 12px;
     border: 1px solid transparent;
     border-radius: 0px;
     background-color: white;
@@ -101,4 +100,17 @@
     justify-content: center;
     margin: 0;
     height: 100%;
-} 
+}
+
+select,
+select option {
+    color: #90979e;
+    padding: 2px;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #90979e !important;
+    padding-top: 7px;
+    padding-bottom: 5px;
+}
