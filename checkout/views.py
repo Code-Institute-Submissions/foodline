@@ -46,11 +46,11 @@ def checkout(request):
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'delivery_address': request.POST['delivery_address'],
-            'city': request.POST['city'],
             'postcode': request.POST['postcode'],
+            'city': request.POST['city'],
             'country': request.POST['country'],
-            'delivery_info': request.POST['delivery_info'],
         }
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -83,8 +83,9 @@ def checkout(request):
                         "Please call us for assistance!")
                     )
                     order.delete()
-                    return redirect(reverse('view_bag'))
+                    return redirect(reverse('view_cart'))
 
+            # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
