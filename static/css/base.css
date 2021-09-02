@@ -47,6 +47,10 @@ body {
     font-size: 13px;
 }
 
+.nav-box {
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+}
+
 .nav-link-filter:hover,
 .nav-link-filter:active,
 .nav-link-filter:focus,
@@ -56,6 +60,8 @@ body {
     color: #FF6060;
     background: white;
     text-decoration: none;
+    animation-duration: 1s;
+    transition: all 0.5s;
 }
 
 .main-logo-link {
@@ -67,16 +73,39 @@ body {
     color: white;
     min-width: 260px;
     font-weight: 500;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.40);
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+.shop-now-button:focus {
+    background: transparent;
+    border: 1px solid #FC7A57;
+    color: #FC7A57;
+    animation-duration: 1s;
+    transition: all 0.5s;
+}
+
+.search-bar,
+.search-btn {
+    border: 1px solid #FF6060;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+}
+
+.search-btn:hover {
+    background: #FF6060;
+}
+
+.search-bar:hover,
+.search-bar:active,
+.search-bar:focus {
+    background: transparent;
+    border: 1px solid #FC7A57;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
 }
 
 .text-black {
@@ -121,7 +150,7 @@ body {
     overflow-y: auto;
 }
 
-.toast-cart-title{
+.toast-cart-title {
     height: 10px;
     padding-top: -20px;
 }
@@ -333,8 +362,10 @@ body {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -352,8 +383,8 @@ body {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
@@ -371,11 +402,11 @@ body {
     box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
+.allauth-form-inner-content input[type='submit']:hover {
     text-decoration: none;
     background: #54B582;
     color: white;
@@ -384,7 +415,8 @@ body {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
 .allauth input[type=text],
