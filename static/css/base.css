@@ -88,20 +88,29 @@ body {
 
 .search-bar,
 .search-btn {
-    border: 1px solid #FF6060;
+    border: 3px solid #EAF5EF;
     border-radius: 20px;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 4px 4px rgb(0 0 0 / 0.12);
+    background: #EAF5EF;
 }
 
-.search-btn:hover {
-    background: #FF6060;
+.search-bar {
+    background: white;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 0 0;
+}
+
+.search-btn:hover,
+.search-bar:hover {
+    background: #EAF5EF;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 0 0 rgb(0 0 0 / 0.12);
+    color: #FF6060;
 }
 
 .search-bar:hover,
 .search-bar:active,
 .search-bar:focus {
     background: transparent;
-    border: 1px solid #FC7A57;
+    border: 3px solid #EAF5EF;
     border-radius: 20px;
     color: black;
     font-weight: 500;
