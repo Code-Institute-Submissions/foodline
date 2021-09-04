@@ -79,9 +79,9 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                            data-product_ripeness="{{ item.ripeness }}"><small>Remove</small></a>
+                            <a class="remove-item text-danger float-left my-0 w-4" id="remove_{{ item.item_id }}"
+                            data-product_ripeness="{{ item.ripeness }}"><i class="far fa-times-circle"></i></a>
+                            <a class="update-link float-right"><small>Update</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
