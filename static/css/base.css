@@ -219,12 +219,16 @@ body {
 }
 
 .product-link {
-    min-height: 260px;
+    min-height: 240px;
 }
 
 .img-box {
     width: 100%;
     max-height: 400px;
+}
+
+.on-sale {
+    color: #FC7A57;
 }
 
 .product-img {
@@ -234,16 +238,18 @@ body {
 
 .add-cart {
     width: 120px;
-    background: #FF6060;
+    background: #ff6060de;
     color: white;
     font-weight: 300;
-    margin-right: 10px;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    margin-right: 5px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 3px 3px rgb(0 0 0 / 0.12);
     cursor: pointer;
+    border-radius: 20px;
+    border: 3px solid #FF6060;
 }
 
 .add-cart:hover{
-    background: #FC7A57;
+    background: #FF6060;
     color: white;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.36);
 }
@@ -252,32 +258,52 @@ body {
     color: black;
 }
 
+.product-btn-box {
+    text-align: center;
+    margin: auto;
+}
+
 .qty_input {
-    border: none;
+    height: 36px;
     background-color: #54b581ee;
     color: white;
     text-align: center;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 3px 3px rgb(0 0 0 / 0.12);
+    border-radius: 20px;
+    padding: 10px 0px;
+    border: 3px solid #54B582;
+    cursor: pointer;
 }
 
 .qty-btn {
-    background: #54B582;
+    background: #54b581b4;
     border-radius: 20px;
     padding-bottom: 2px;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 3px 3px rgb(0 0 0 / 0.16);
+    border: 3px solid #54B582;
 }
 
 .qty-btn:hover {
-    background: #FC7A57;
+    color: #FC7A57;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.36)
 }
 
 .ripe-box {
     width: 200px;
     border: none;
-    background-color: #54B582;
+    background: #54b581b4;
+    color: white;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 3px 3px rgb(0 0 0 / 0.16);
+    border: 3px solid #54B582;
     border-radius: 20px;
-    color: black;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -khtml-border-radius: 20px;
+}
+
+.ripe-box:hover {
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.36);
+    background: #54b581b4;
 }
 
 .filter-top {
