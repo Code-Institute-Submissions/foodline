@@ -227,10 +227,6 @@ body {
     max-height: 400px;
 }
 
-.on-sale {
-    color: #FC7A57;
-}
-
 .product-img {
     width: 100%;
     padding: 30px;
@@ -263,8 +259,12 @@ body {
     margin: auto;
 }
 
+.on-sale {
+    color: #FC7A57;
+}
+
 .qty_input {
-    height: 36px;
+    height: 35px;
     background-color: #54b581ee;
     color: white;
     text-align: center;
