@@ -402,7 +402,39 @@ body {
 .cart-box {
     background-color: #EAF5EF;
     box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    min-height: 350px;
+    border-radius: 20px;
 }
+
+.empty-cart {
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    width: 100%;
+}
+
+.empty-cart p {
+    margin-bottom: 150px;
+}
+
+.empty-cart .empty-btn {
+    background: #FC7A57;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    text-decoration: none;
+}
+
+.empty-cart .empty-btn:hover {
+    background: white;
+    border-radius: 20px;
+    color: #FC7A57;
+    font-weight: 500;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
+    text-decoration: none;
+}
+
 
 .image-box {
     background-color: white;
