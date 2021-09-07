@@ -1,7 +1,10 @@
+/* -------------------------------- Admin manage products */
+
 .form-control {
     color: #000;
     border: 1px solid white;
     border-radius: 20px;
+    width: 100%;
 }
 
 input,
@@ -11,6 +14,7 @@ input[type=email] {
     border: none;
     background: white;
     border-radius: 20px;
+    width: 100%;
 }
 
 select,
@@ -22,4 +26,14 @@ select option {
 select:invalid,
 select option[value=""] {
     color: #90979e !important;
+}
+
+.add-product-box {
+    background-color: #EAF5EF;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    min-height: 350px;
+    border-radius: 20px;
+    color: black;
+    padding: 20px;
+    width: 100%;
 }
