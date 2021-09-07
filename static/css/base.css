@@ -581,6 +581,16 @@ body {
     color: white;
 }
 
+/* -------------------------------- Admin add products */
+
+.add-product-box {
+    background-color: #EAF5EF;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    min-height: 350px;
+    border-radius: 20px;
+    color: black;
+    padding: 20px;
+}
 
 /* -------------------------------- Media Queries */
 
