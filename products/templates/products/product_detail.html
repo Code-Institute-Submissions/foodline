@@ -88,11 +88,11 @@
                                 </div>
                             </div>
                             <div class="col{% if r %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn">
+                                <a href="{% url 'products' %}" id="return_products" class="btn">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase more-btn">More Groceries</span>
+                                    <span class="text-uppercase more-btn">Back</span>
                                 </a>
                                 <input type="submit" class="add-cart btn" value="Add to Cart" id="add-to-cart">
                             </div>
@@ -109,5 +109,19 @@
 {% block postloadjs %}
     {{ block.super }}
         <script type="text/javascript" src="{% static 'products/js/addtocart.js' %}"></script>
+        <script type="text/javascript">
+            // Load users saved filter preferences from localStorage 
+            // to product_details "back" button
+            const filterUrl = sessionStorage.getItem('userFilter');
+            const noFilter = "{% url 'products' %}"
+            // If no filters or categories has been used for this session
+            if (sessionStorage.getItem("userFilter") === null || sessionStorage.getItem("userFilter") === " ") {
+                // set defualt href to product_details "back" button
+                document.getElementById('return_products').setAttribute('href', noFilter);
+            } else {
+                // Otherwise set recently used filters to product_details "back" button
+                document.getElementById('return_products').setAttribute('href', filterUrl);
+            };
+        </script>
     {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %} 
