@@ -29,10 +29,11 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if ripeness in cart[item_id]['items_by_ripeness'].keys():
                 cart[item_id]['items_by_ripeness'][ripeness] += quantity
-                messages.success(request,
-                                 (f'Updated {product.name} - '
-                                  f'{ripeness} quantity to '
-                                  f'{cart[item_id]["items_by_ripeness"][ripeness]}'))
+                messages.success(
+                        request,
+                        f'Updated {product.name} - '
+                        f'{ripeness} quantity to '
+                        f'{cart[item_id]["items_by_ripeness"][ripeness]}')
             else:
                 cart[item_id]['items_by_ripeness'][ripeness] = quantity
                 messages.success(request,
@@ -46,7 +47,9 @@ def add_to_cart(request, item_id):
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+            messages.success(
+                    request,
+                    f'Updated {product.name} quantity to {cart[item_id]}')
         else:
             cart[item_id] = quantity
             messages.success(request, f'{product.name} added to your cart')
@@ -68,21 +71,26 @@ def adjust_cart(request, item_id):
     if ripeness:
         if quantity > 0:
             cart[item_id]['items_by_ripeness'][ripeness] = quantity
-            messages.success(request,
-                             (f'Updated {product.name} - '
-                              f'{ripeness} quantity to '
-                              f'{cart[item_id]["items_by_ripeness"][ripeness]}'))
+            messages.success(
+                    request,
+                    f'Updated {product.name} - '
+                    f'{ripeness} quantity to '
+                    f'{cart[item_id]["items_by_ripeness"][ripeness]}')
         else:
             del cart[item_id]['items_by_ripeness'][ripeness]
             if not cart[item_id]['items_by_ripeness']:
                 cart.pop(item_id)
-            messages.success(request,
-                             (f'Removed {product.name} - '
-                              f'{ripeness} from your cart'))
+            messages.success(
+                    request,
+                    f'Removed {product.name} - '
+                    f'{ripeness} from your cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+            messages.success(
+                    request,
+                    f'Updated {product.name} quantity to '
+                    f'{cart[item_id]}')
         else:
             cart.pop(item_id)
             messages.success(request, f'{product.name} Removed from your cart')
@@ -105,9 +113,10 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['items_by_ripeness'][ripeness]
             if not cart[item_id]['items_by_ripeness']:
                 cart.pop(item_id)
-                messages.success(request,
-                                 (f'Removed {product.name} - '
-                                  f'{ripeness} from your cart'))
+            messages.success(
+                    request,
+                    f'Removed {product.name} - '
+                    f'{ripeness} from your cart')
         else:
             cart.pop(item_id)
             messages.success(request, f'{product.name} Removed from your cart')
