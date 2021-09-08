@@ -10,7 +10,8 @@
 input,
 input[type=text],
 input[type=password],
-input[type=email] {
+input[type=email],
+input[type=file] {
     border: none;
     background: white;
     border-radius: 20px;
