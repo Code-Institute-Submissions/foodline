@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -75,6 +76,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """ Add a product to the store """
     if request.user.is_superuser:
@@ -102,6 +104,7 @@ def add_product(request):
         return redirect(reverse('home'))
 
 
+@login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if request.user.is_superuser:
@@ -132,9 +135,14 @@ def edit_product(request, product_id):
         return redirect(reverse('home'))
 
 
+@login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product Deleted')
-    return redirect(reverse('products'))
+    if request.user.is_superuser:
+        product = get_object_or_404(Product, pk=product_id)
+        product.delete()
+        messages.success(request, 'Product Deleted')
+        return redirect(reverse('products'))
+    else:
+        messages.error(request, 'Ooops, you took the wrong door..')
+        return redirect(reverse('home'))
