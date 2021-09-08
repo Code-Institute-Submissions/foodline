@@ -232,6 +232,31 @@ body {
     border-radius: 20px;
 }
 
+.qty_input {
+    height: 35px;
+    background-color: #54b581ee;
+    color: white;
+    text-align: center;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 3px 3px rgb(0 0 0 / 0.12);
+    border-radius: 20px;
+    padding: 10px 0px;
+    border: 3px solid #54B582;
+    cursor: pointer;
+}
+
+.qty-btn {
+    background: #54b581b4;
+    border-radius: 20px;
+    padding-bottom: 2px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 3px 3px rgb(0 0 0 / 0.16);
+    border: 3px solid #54B582;
+}
+
+.qty-btn:hover {
+    color: #FC7A57;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.36)
+}
+
 .empty-cart {
     align-items: center;
     text-align: center;
@@ -260,7 +285,6 @@ body {
     box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
     text-decoration: none;
 }
-
 
 .image-box {
     background-color: white;
