@@ -17,14 +17,14 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col mt-3">
-                <h2 class="logo-font text-center">Product Management</h2>
+            <div class="col text-center mt-3">
+                <h2 class="logo-font mb-3">Product Management</h2>
             </div>
         </div>
 
         <div class="row add-product-box">
-            <div class="col-12 col-md-6">
-                <h5 class="text-muted text-center">Add a Product</h5>
+            <div class="col-12 col-md-6 offset-md-3 offset-sm-0">
+                <h2 class="text-center">Add a Product</h2>
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2 rounded px-3 mb-5" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
