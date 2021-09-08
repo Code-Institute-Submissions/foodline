@@ -1,1 +1,1 @@
-web: gunicorn foodline.wsgi:application 
+web: gunicorn foodline.wsgi:application
