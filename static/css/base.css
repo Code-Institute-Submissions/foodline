@@ -344,12 +344,18 @@ body {
     color: black;
 }
 
+.auth-btn {
+    border-radius: 20px;
+    margin: 20px 0px;
+}
 
 .auth-box {
     background-color: #EAF5EF;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 30%);
     padding: 20px 10px 20px 10px;
     border-radius: 20px;
+    min-height: 350px;
+    text-align: center;
 }
 
 .btn-div {
