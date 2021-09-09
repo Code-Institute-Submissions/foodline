@@ -35,14 +35,25 @@
                         </div>
                     {% endif %}
                     <p class="mb-0">{{ product.name }}</p>
-                    {% if product.on_sale %}
-                        <p class="lead mb-0 text-left font-weight-bold">
-                            ${{ product.price }}<span class="on-sale"> - On Sale!
-                            <i class="fas fa-comment-dollar"></i></span>
-                        </p>
-                    {% else %}
-                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                    {% endif %}	
+                    {% if product.on_sale %} 
+                                        <p class="lead mb-0 text-left font-weight-bold">
+                                        {% if product.weight_price %} 
+                                            ${{ product.price }} <small>/ kg</small><span class="on-sale"> - On Sale!
+                                            <i class="fas fa-comment-dollar"></i></span>
+                                        </p>
+                                        {% else %}
+                                        <p class="lead mb-0 text-left font-weight-bold">
+                                                ${{ product.price }}<span class="on-sale"> - On Sale!
+                                                <i class="fas fa-comment-dollar"></i></span>
+                                            </p>
+                                        {% endif %} 
+                                    {% else %}
+                                        {% if product.weight_price %}
+                                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}<small>/ kg</small></p>
+                                        {% else %}
+                                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                        {% endif %} 
+                                    {% endif %} 
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
