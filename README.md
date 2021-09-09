@@ -1,13 +1,13 @@
 <h1>FOODLINE</h1>
 <h1 align="center"><img src=""/></h1>
 
- <a href="">Live website</a>
+ <a href="https://foodline-1.herokuapp.com">Live website</a>
 
-  <a href="">GitHub Repository</a>
+  <a href="https://github.com/DADEVFA/foodline">GitHub Repository</a>
 
 ## About
 
-Foodline, an online groceries shop. 
+Foodline, an everyday online groceries shop. 
 
 ## Table of contents: 
 * [General](#general)

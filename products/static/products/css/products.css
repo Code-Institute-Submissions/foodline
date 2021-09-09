@@ -12,7 +12,6 @@ input[type=text],
 input[type=password],
 input[type=email],
 input[type=file] {
-    border: none;
     background: white;
     border-radius: 20px;
     width: 100%;
@@ -277,4 +276,30 @@ select option[value=""] {
     background-color: #FF6060;
     border-color: #FF6060;
     border-radius: 0;
+}
+
+.search-bar,
+.search-btn {
+    border: 3px solid #EAF5EF;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 4px 4px rgb(0 0 0 / 0.12);
+    background: #EAF5EF;
+}
+
+
+.search-btn:hover,
+.search-bar:hover {
+    background: #EAF5EF;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 0 0 rgb(0 0 0 / 0.12);
+    color: #FF6060;
+}
+
+.search-bar:hover,
+.search-bar:active,
+.search-bar:focus {
+    background: transparent;
+    border: 3px solid #EAF5EF;
+    border-radius: 20px;
+    color: #EAF5EF;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
 }

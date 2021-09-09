@@ -95,8 +95,7 @@ body {
 }
 
 .search-bar {
-    background: transparent;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 0 0;
+    background: white;
 }
 
 .search-btn:hover,
@@ -112,8 +111,7 @@ body {
     background: transparent;
     border: 3px solid #EAF5EF;
     border-radius: 20px;
-    color: black;
-    font-weight: 500;
+    color: #EAF5EF;
     box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
 }
 
