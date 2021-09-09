@@ -95,7 +95,7 @@ body {
 }
 
 .search-bar {
-    background: white;
+    background: transparent;
     box-shadow: 0 3px 3px rgb(0 0 0 / 0.16), inset 0 0 0;
 }
 
@@ -244,6 +244,13 @@ body {
     cursor: pointer;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none;
+}
+
 .qty-btn {
     background: #54b581b4;
     border-radius: 20px;
@@ -256,6 +263,13 @@ body {
     color: #FC7A57;
     box-shadow: 0 3px 3px rgb(0 0 0 / 0.36)
 }
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 
 .empty-cart {
     align-items: center;
@@ -469,6 +483,33 @@ body {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem;
+        font-size: 1rem;
+    }
+
+    .btn.btn-lg,
+    .btn.btn-lg {
+        padding: .400rem .300rem;
+        font-size: .95rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
     }
 }
 

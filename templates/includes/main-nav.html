@@ -1,11 +1,15 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-
+        <li class="nav-item d-block d-md-none">
+            <a class="nav-link-filter" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
         <li class="nav-item dropdown">
-            <a class="nav-link-filter" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link-filter" href="#" id="proteins-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Food
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+            <div class="dropdown-menu border-0" aria-labelledby="proteins-link">
                 <a href="" class="dropdown-item">Fish, Egg &amp; Dairy</a>
                 <a href="{% url 'products' %}?category=meat" class="dropdown-item">Meat</a>
                 <a href="{% url 'products' %}?category=vegetarian" class="dropdown-item">Vegeterian</a>
@@ -15,10 +19,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="nav-link-filter" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link-filter" href="#" id="vegetables-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Greens & Vegetables
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+            <div class="dropdown-menu border-0" aria-labelledby="vegetables-link">
                 <a href="{% url 'products' %}?category=fruits,berries" class="dropdown-item">Fruits &amp; Berries</a>
                 <a href="{% url 'products' %}?category=vegetables" class="dropdown-item">Vegetables</a>
                 <a href="{% url 'products' %}?category=root_vegetables" class="dropdown-item">Root Vegetables</a>
@@ -27,10 +31,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="nav-link-filter" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link-filter" href="#" id="beverages-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Beverages
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0" aria-labelledby="beverages-link">
                 <a href="{% url 'products' %}?category=water" class="dropdown-item">Water</a>
                 <a href="{% url 'products' %}?category=soda" class="dropdown-item">Soda</a>
                 <a href="{% url 'products' %}?category=juices" class="dropdown-item">Juices</a>
