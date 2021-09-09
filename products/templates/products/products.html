@@ -68,7 +68,11 @@
                                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                                         {% csrf_token %}
                                         <div class="form-row">
-                                            <input type="submit" class="btn add-cart" value="Add to Cart">
+                                            {% if product.inventory_status != "0" %}
+                                                <input type="submit" class="btn add-cart" value="Add to Cart">
+                                                {% else %}
+                                                <div class="btn contact-btn">Out of stock !</div>
+                                            {% endif %}
                                             {% with product.is_ripe as r %}
                                             {% if r %}
                                                 <div class="col-12">

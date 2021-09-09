@@ -110,7 +110,11 @@
                                     </span>
                                     <span class="text-uppercase more-btn">Back</span>
                                 </a>
-                                <input type="submit" class="add-cart btn" value="Add to Cart" id="add-to-cart">
+                                {% if product.inventory_status != "0" %}
+                                    <input type="submit" class="add-cart btn" value="Add to Cart" id="add-to-cart">
+                                {% else %}
+                                    <div class="btn contact-btn">Out of stock !</div>
+                                {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
