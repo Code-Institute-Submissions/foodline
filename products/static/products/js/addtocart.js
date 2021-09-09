@@ -13,5 +13,3 @@ function mouseOver() {
 function mouseOut() {
     document.getElementById('add-to-cart').setAttribute('value', left);
   }
-
-
