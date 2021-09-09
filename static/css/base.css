@@ -230,6 +230,7 @@ body {
     box-shadow: 0 3px 6px rgb(0 0 0 / 0.30);
     min-height: 350px;
     border-radius: 20px;
+    padding: 20px;
 }
 
 .qty_input {
@@ -270,7 +271,6 @@ select {
     appearance: none;
 }
 
-
 .empty-cart {
     align-items: center;
     text-align: center;
@@ -304,6 +304,11 @@ select {
     background-color: white;
     box-shadow: 0 3px 3px rgb(0 0 0 / 0.16);
     text-align: center;
+}
+
+.btn.btn-outline-black.rounded-0,
+.btn.btn-black.rounded-0 {
+    padding: .375rem .375rem;
 }
 
 /* Allauth form formatting */
@@ -451,6 +456,21 @@ select {
     color: white;
 }
 
+.up-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #eaf5ef7a;
+    color: #FC7A57;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.30);
+}
+
+.up-button:hover {
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.10);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -510,6 +530,16 @@ select {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+
+    .more-btn,
+    .checkout-btn {
+        padding: .375rem .375rem;
+        font-size: .95rem;
+    }
+
+    .cart-box {
+        padding: 20px;
     }
 }
 

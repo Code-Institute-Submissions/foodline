@@ -1,0 +1,32 @@
+<form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <button class="decrement-qty btn btn-sm qty-btn"
+                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-minus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            <input class="form-control qty_input" type="number"
+                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+            <div class="input-group-append">
+                <button class="increment-qty btn btn-sm qty-btn"
+                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-plus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            {% if item.product.is_ripe %}
+                <input type="hidden" name="product_ripe" value="{{ item.ripeness }}">
+            {% endif %}
+        </div>
+    </div>
+</form>
+<a class="update-link float-right"><small>Update</small></a>
+<a class="remove-item text-danger float-left my-0 w-4" id="remove_{{ item.item_id }}"
+data-product_ripeness="{{ item.ripeness }}"><i class="far fa-times-circle"></i></a>
