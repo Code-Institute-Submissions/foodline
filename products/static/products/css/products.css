@@ -242,6 +242,13 @@ select option[value=""] {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    background: #eaf5ef7a;
+    color: #FC7A57;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.30);
+}
+
+.up-button:hover {
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.10);
 }
 
 /* Product Form */
